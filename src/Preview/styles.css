@@ -1,0 +1,24 @@
+.preview {
+  align-self: flex-start;
+  width: 100%;
+  text-align: left;
+  font-family: "Monaco";
+}
+
+.output {
+  font-family: inherit;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  -webkit-filter: invert(10%);
+  background: var(--main-background-color);
+}
+
+
+.return {
+  font-size: 1.3em;
+  position: relative;
+  top: 5px;
+  color: var(--secondary-font-color);
+}
