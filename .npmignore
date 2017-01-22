@@ -2,5 +2,5 @@ src
 .babelrc
 node_modules
 scripts
-screenshot.png
+screenshot.gif
 webpack.config.js
