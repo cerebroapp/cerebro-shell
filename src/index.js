@@ -36,7 +36,7 @@ const getCachedEnv = memoize(() => {
 }, MEMOIZE_OPTIONS)
 
 const fn = ({term, display, update, actions}) => {
-  const match = term.match(/^\$\s(.+)/)
+  const match = term.match(/^\$\s*(.*)/)
   if (match) {
     const cmd = match[1]
     const title = `Shell command: ${cmd}`
