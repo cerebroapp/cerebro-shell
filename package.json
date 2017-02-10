@@ -1,6 +1,6 @@
 {
   "name": "cerebro-shell",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cerebro plugin to execute any shell command from Cerebro search line",
   "license": "MIT",
   "repository": "KELiON/cerebro-shell",
