@@ -3,8 +3,9 @@ const React = require('react')
 const { exec } = require('child_process')
 const Preview = require('./Preview')
 const Hint = require('./Preview/Hint')
-const { defaultShell, getEnv, getHistory } = require('./env')
 const { memoize }  = require('cerebro-tools')
+const shellHistory = require('shell-history')
+const shellEnv = require('shell-env')
 
 // Plugin constants
 const id = 'shell'
@@ -17,19 +18,18 @@ const MEMOIZE_OPTIONS = {
   preFetch: true
 }
 
-const getCachedHistory = memoize(() => (
-  getCachedEnv().then(({shell}) => getHistory(shell))
-), MEMOIZE_OPTIONS)
+const getHistory = () => (
+  Promise.resolve(shellHistory())
+)
+
+const getCachedHistory = memoize(getHistory, MEMOIZE_OPTIONS)
 
 const getCachedEnv = memoize(() => {
   const ENV = {}
-  return defaultShell().then(output => {
-    ENV.shell = output
-    return getEnv(output)
-  }).then(env => {
+  return shellEnv().then(env => {
     ENV.env = env
     ENV.cwd = env.HOME || `/Users/${process.env.USER}`
-    ENV.shell = env.SHELL || ENV.shell
+    ENV.shell = env.SHELL
     return ENV
   })
 }, MEMOIZE_OPTIONS)
