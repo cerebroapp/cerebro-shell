@@ -4,8 +4,9 @@ const { exec } = require('child_process')
 const Preview = require('./Preview')
 const Hint = require('./Preview/Hint')
 const { memoize }  = require('cerebro-tools')
-const shellHistory = require('shell-history')
+const shellHistory = require('./shell-history')
 const shellEnv = require('shell-env')
+const uniq = require('lodash.uniq')
 
 // Plugin constants
 const id = 'shell'
@@ -19,7 +20,7 @@ const MEMOIZE_OPTIONS = {
 }
 
 const getHistory = () => (
-  Promise.resolve(shellHistory())
+  Promise.resolve(uniq(shellHistory().reverse()))
 )
 
 const getCachedHistory = memoize(getHistory, MEMOIZE_OPTIONS)
