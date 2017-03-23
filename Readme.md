@@ -1,5 +1,7 @@
 # cerebro-shell
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/KELiON/cerebro-shell.svg)](https://greenkeeper.io/)
+
 > [Cerebro](http://www.cerebroapp.com) plugin to execute any shell command from Cerebro search line
 
 ![](screenshot.gif)
