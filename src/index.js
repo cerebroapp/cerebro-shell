@@ -4,7 +4,7 @@ const { exec } = require('child_process')
 const Preview = require('./Preview')
 const Hint = require('./Preview/Hint')
 const { memoize }  = require('cerebro-tools')
-const shellHistory = require('./shell-history')
+const shellHistory = require('shell-history')
 const shellEnv = require('shell-env')
 const uniq = require('lodash.uniq')
 
