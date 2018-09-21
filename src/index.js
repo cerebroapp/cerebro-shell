@@ -1,12 +1,13 @@
 'use strict'
-const React = require('react')
-const { exec } = require('child_process')
-const Preview = require('./Preview')
-const Hint = require('./Preview/Hint')
-const { memoize }  = require('cerebro-tools')
-const shellHistory = require('shell-history')
-const shellEnv = require('shell-env')
-const uniq = require('lodash.uniq')
+import React from 'react'
+import { exec } from 'child_process'
+import Preview from './Preview'
+import Hint from './Preview/Hint'
+
+import { memoize }  from 'cerebro-tools'
+import shellHistory from 'shell-history'
+import shellEnv  from 'shell-env'
+import uniq from 'lodash.uniq'
 
 // Plugin constants
 const id = 'shell'
@@ -35,7 +36,7 @@ const getCachedEnv = memoize(() => {
   })
 }, MEMOIZE_OPTIONS)
 
-const fn = ({term, display, update, actions}) => {
+export const fn = ({term, display, update, actions}) => {
   const match = term.match(/^\$\s*(.*)/)
   if (match) {
     const cmd = match[1]
@@ -48,6 +49,7 @@ const fn = ({term, display, update, actions}) => {
       // Get user env, execute command and update preview
       getCachedEnv().then(({shell, cwd, env, }) => {
         const { stdout, stderr } = exec(cmd, { shell, env, cwd })
+        console.log(stdout, stderr)
         const getPreview = () => (
           <Preview cmd={cmd} stdout={stdout} stderr={stderr} />
         )
@@ -69,8 +71,5 @@ const fn = ({term, display, update, actions}) => {
   }
 }
 
-module.exports = {
-  fn,
-  keyword: '$',
-  name: 'Shell command'
-}
+export const keyword = '$'
+export const name = 'Shell command'

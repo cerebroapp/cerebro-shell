@@ -1,6 +1,6 @@
-const React = require('react');
-const styles = require('./styles.css');
+import React from 'react'
+import styles from './styles.css'
 
-module.exports = () => (
+export default () => (
   <div><span className={styles.return}>↩</span> to exec this command</div>
 )

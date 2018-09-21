@@ -1,7 +1,7 @@
-const React = require('react')
-const styles = require('./styles.css')
+import React from 'react'
+import styles from './styles.css'
 
-module.exports = class Preview extends React.Component {
+export default class Preview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
