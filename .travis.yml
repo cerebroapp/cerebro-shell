@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '9'
+- '10'
+deploy:
+  provider: npm
+  email: kelionweb@gmail.com
+  on:
+    tags: true
+  api_key:
+    secure: EnoX6WAoqg12q0a/fz1SoPwMMZ3+RMo4Ynj3X14/9/+3L24/VTa+6U9Xh1IjunRGxQsfysd6v73ml3+ABsGfrweYg+ajcC7hVOwYKdbB7L0W6qvoePBFSCEEMViO7/Bo2ZGc97vt57F7aZRKJl5JlVi21paUuv4XTAzL61NGP0GpzoSYyhuLqRLvLLY/nhQx5adEfRvVdNyytPv/3vFy0a//J60XCkC2WNyavv2L9gmjl4S45pu0kOQFOtTJOpOUIFwPUdskwCrKexm1NGxdsQqYGfGHB+JrZZ2pfd6iYai6bMgeNquJa5crKYb/dwnJ7GGW599JSEo0SlMNcqc2dL8+7cYMR08aLw+TRcitGCO+b+EjAtCHUUGgDOPlj/NMYnGBc496ODwxqj4W4s/ZIrag2URDXRU7dfTIAwAmXbRNp6J94RVqyp4CiUtU4RA5hIbF4oYo82HO04Mr1apfCsi8MOUucn1zMDLns6taUzcEdmsv8l29ovfxPm1n2hoO/GgEqwIftLo6RkWX2EnXXo4FN47o+PuvQ02moOEtGIeRJ3lkNSG+P+D1x+WDvu/mcqYyyw7Vc8gUIcuxSJyzo6qIqXgrqazPL4Vz9RqKoV/h6rK/HIZxPJKftwUsVCqvS7Q7mpAURyHSDOH8MUmcJ+CXY8yqzBGCjggiZhXV9YQ=
