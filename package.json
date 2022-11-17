@@ -3,20 +3,19 @@
   "version": "0.1.7",
   "description": "Cerebro plugin to execute any shell command from Cerebro search line",
   "license": "MIT",
-  "repository": "KELiON/cerebro-shell",
+  "repository": "cerebroapp/cerebro-shell",
   "author": {
     "name": "Alexandr Subbotin",
     "email": "kelionweb@gmail.com",
     "url": "asubbotin.ru"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=16"
   },
   "scripts": {
-    "start": "cerebro-scripts start",
-    "build": "cerebro-scripts build",
-    "test": "cerebro-scripts test",
-    "prepublish": "rimraf ./dist && npm run build"
+    "start": "cerebro-build start",
+    "build": "cerebro-build build",
+    "test": "cerebro-build test"
   },
   "main": "dist/index.js",
   "keywords": [
@@ -28,14 +27,15 @@
     "cerebro-plugin"
   ],
   "devDependencies": {
-    "cerebro-scripts": "^0.0.25",
-    "rimraf": "^2.6.2"
+    "@types/memoizee": "^0.4.8",
+    "@types/node": "^18.11.9",
+    "cerebro-build": "^1.2.0",
+    "memoizee": "^0.4.15"
   },
   "dependencies": {
     "cerebro-tools": "^0.1.0",
-    "cerebro-ui": "^0.0.16",
-    "lodash.uniq": "^4.5.0",
-    "shell-env": "^0.3.0",
-    "shell-history": "^1.0.0"
+    "@cerebroapp/cerebro-ui": "2.0.0-alpha.3",
+    "shell-env": "^4.0.1",
+    "shell-history": "^2.0.0"
   }
 }

@@ -1,6 +1,7 @@
-import React from 'react'
-import styles from './styles.css'
+import styles from "./styles.module.css";
 
 export default () => (
-  <div><span className={styles.return}>↩</span> to exec this command</div>
-)
+  <div>
+    <span className={styles.return}>↩</span> to exec this command
+  </div>
+);
