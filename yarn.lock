@@ -160,12 +160,12 @@
   dependencies:
     lightningcss "^1.14.0"
 
-"@types/memoizee@^0.4.8":
+"@types/memoizee@0.4.8":
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/@types/memoizee/-/memoizee-0.4.8.tgz#04adc0c266a0f5d72db0556fdda2ba17dad9b519"
   integrity sha512-qDpXKGgwKywnQt/64fH1O0LiPA++QGIYeykEUiZ51HymKVRLnUSGcRuF60IfpPeeXiuRwiR/W4y7S5VzbrgLCA==
 
-"@types/node@^18.11.9":
+"@types/node@18.11.9":
   version "18.11.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
   integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
@@ -276,7 +276,7 @@ callsites@^3.0.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-cerebro-build@1.2.0, cerebro-build@^1.2.0:
+cerebro-build@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/cerebro-build/-/cerebro-build-1.2.0.tgz#851c47afe411a39045e68d7de70bbdc1e56ff13f"
   integrity sha512-accqG4kteHkpwextWg06DNaYNXNfRFU63Et6SDlA4SIo58YuQ+iOuzyat17Bki2mn8uT9v5ffEa5NGSsdlu42Q==
@@ -876,20 +876,7 @@ memoize-one@^5.0.0:
   resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
   integrity sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==
 
-memoizee@^0.4.1:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/memoizee/-/memoizee-0.4.5.tgz#1bc3ea1e4be056dd475d521979d7be3d5e5b21c8"
-  dependencies:
-    d "1"
-    es5-ext "^0.10.13"
-    es6-weak-map "^2.0.1"
-    event-emitter "^0.3.4"
-    is-promise "^2.1"
-    lru-queue "0.1"
-    next-tick "1"
-    timers-ext "0.1"
-
-memoizee@^0.4.15:
+memoizee@0.4.15:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/memoizee/-/memoizee-0.4.15.tgz#e6f3d2da863f318d02225391829a6c5956555b72"
   integrity sha512-UBWmJpLZd5STPm7PMUlOw/TSy972M+z8gcyQ5veOnSDRREz/0bmpyTfKt3/51DhEBqCZQn1udM/5flcSPYhkdQ==
@@ -902,6 +889,19 @@ memoizee@^0.4.15:
     lru-queue "^0.1.0"
     next-tick "^1.1.0"
     timers-ext "^0.1.7"
+
+memoizee@^0.4.1:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/memoizee/-/memoizee-0.4.5.tgz#1bc3ea1e4be056dd475d521979d7be3d5e5b21c8"
+  dependencies:
+    d "1"
+    es5-ext "^0.10.13"
+    es6-weak-map "^2.0.1"
+    event-emitter "^0.3.4"
+    is-promise "^2.1"
+    lru-queue "0.1"
+    next-tick "1"
+    timers-ext "0.1"
 
 merge-stream@^2.0.0:
   version "2.0.0"
@@ -1195,7 +1195,7 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shell-env@^4.0.1:
+shell-env@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/shell-env/-/shell-env-4.0.1.tgz#883302d9426095d398a39b102a851adb306b8cb8"
   integrity sha512-w3oeZ9qg/P6Lu6qqwavvMnB/bwfsz67gPB3WXmLd/n6zuh7TWQZtGa3iMEdmua0kj8rivkwl+vUjgLWlqZOMPw==
@@ -1204,7 +1204,7 @@ shell-env@^4.0.1:
     execa "^5.1.1"
     strip-ansi "^7.0.1"
 
-shell-history@^2.0.0:
+shell-history@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/shell-history/-/shell-history-2.0.0.tgz#b6d28a1416ccd5794209bc276c9ef8abd353d07e"
   integrity sha512-gk7ORkNTLZHmxD6K6vcyijxmYwlI2vVr8clvgKFqazHQKMI9wBXrze4u4af0PQ1uY86XB6JT8WKcmiVGW93KUQ==

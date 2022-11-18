@@ -4,11 +4,10 @@
   "description": "Cerebro plugin to execute any shell command from Cerebro search line",
   "license": "MIT",
   "repository": "cerebroapp/cerebro-shell",
-  "author": {
-    "name": "Alexandr Subbotin",
-    "email": "kelionweb@gmail.com",
-    "url": "asubbotin.ru"
-  },
+  "author": "Alexandr Subbotin <kelionweb@gmail.com> (asubbotin.ru)",
+  "contributors": [
+    "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)"
+  ],
   "files": [
     "dist",
     "screenshot.gif"
@@ -19,7 +18,8 @@
   "scripts": {
     "start": "cerebro-build start",
     "build": "cerebro-build build",
-    "test": "cerebro-build test"
+    "test": "cerebro-build test",
+    "prepublish": "cerebro-build clear && cerebro-build build"
   },
   "main": "dist/index.js",
   "keywords": [
@@ -31,15 +31,18 @@
     "exec"
   ],
   "devDependencies": {
-    "@types/memoizee": "^0.4.8",
-    "@types/node": "^18.11.9",
+    "@types/memoizee": "0.4.8",
+    "@types/node": "18.11.9",
     "@types/react": "16.14.34",
-    "cerebro-build": "^1.2.0",
-    "memoizee": "^0.4.15"
+    "cerebro-build": "1.2.0"
   },
   "dependencies": {
     "@cerebroapp/cerebro-ui": "2.0.0-alpha.3",
-    "shell-env": "^4.0.1",
-    "shell-history": "^2.0.0"
+    "shell-env": "4.0.1",
+    "shell-history": "2.0.0",
+    "memoizee": "0.4.15"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
