@@ -1,6 +1,6 @@
 {
-  "name": "cerebro-shell",
-  "version": "0.1.7",
+  "name": "@cerebroapp/cerebro-shell",
+  "version": "1.0.0",
   "description": "Cerebro plugin to execute any shell command from Cerebro search line",
   "license": "MIT",
   "repository": "cerebroapp/cerebro-shell",
@@ -9,6 +9,10 @@
     "email": "kelionweb@gmail.com",
     "url": "asubbotin.ru"
   },
+  "files": [
+    "dist",
+    "screenshot.gif"
+  ],
   "engines": {
     "node": ">=16"
   },
@@ -19,21 +23,21 @@
   },
   "main": "dist/index.js",
   "keywords": [
+    "cerebro-plugin",
     "shell",
     "bash",
     "zsh",
     "cerebro",
-    "exec",
-    "cerebro-plugin"
+    "exec"
   ],
   "devDependencies": {
     "@types/memoizee": "^0.4.8",
     "@types/node": "^18.11.9",
+    "@types/react": "16.14.34",
     "cerebro-build": "^1.2.0",
     "memoizee": "^0.4.15"
   },
   "dependencies": {
-    "cerebro-tools": "^0.1.0",
     "@cerebroapp/cerebro-ui": "2.0.0-alpha.3",
     "shell-env": "^4.0.1",
     "shell-history": "^2.0.0"

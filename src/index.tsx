@@ -1,16 +1,19 @@
 import { exec } from "node:child_process";
 import os from "node:os";
+import termIcon from "./term.png";
 
 import Preview from "./Preview";
 import Hint from "./Preview/Hint";
 
 import memoize from "memoizee";
 import { shellHistory } from "shell-history";
-import { shellEnv } from "shell-env";
 
 // Plugin constants
 const id = "shell";
-const icon = "/Applications/Utilities/Terminal.app";
+const icon =
+  process.platform === "darwin"
+    ? "/Applications/Utilities/Terminal.app"
+    : termIcon;
 
 const MEMOIZE_OPTIONS = {
   length: false as false,
@@ -24,7 +27,7 @@ const getHistory = () => [...new Set(shellHistory().reverse() as string[])];
 const getCachedHistory = memoize(getHistory, MEMOIZE_OPTIONS);
 
 const getCachedEnv = memoize(async () => {
-  const env = (await shellEnv()) as NodeJS.ProcessEnv;
+  const env = await import("shell-env").then(({ shellEnv }) => shellEnv());
   const ENV = {
     env: env,
     cwd: env.HOME || os.homedir(),

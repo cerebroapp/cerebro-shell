@@ -1,14 +1,12 @@
 # cerebro-shell
 
-> [Cerebro](http://www.cerebroapp.com) plugin to execute any shell command from Cerebro search line
+> [Cerebro](http://www.cerebroapp.vercel.app) plugin to execute any shell command from Cerebro search line
 
-![](screenshot.gif)
-
-> Note: it works only with Cerebro version >= 0.2.0
+![Plugin screenshot](screenshot.gif)
 
 ## Usage
 
-In Cerebro, type `$ ` + your shell command. This command will be executed from your current user home directory (you can exec `$ pwd` to see this path).
+In Cerebro, type `$` + your shell command. This command will be executed from your current user home directory (you can exec `$ pwd` to see this path).
 
 Plugin shows real-time result of your command in preview.
 
@@ -20,7 +18,7 @@ Plugin shows real-time result of your command in preview.
 
 ## Related
 
-- [Cerebro](http://github.com/KELiON/cerebro) – main repo for Cerebro app;
+* [Cerebro](http://github.com/cerebroapp/cerebro) – main repo for Cerebro app;
 
 ## License
 
