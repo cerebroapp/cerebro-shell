@@ -1,0 +1,15 @@
+{
+  "include": [
+    "src",
+  ],
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "strict": true,
+    "noImplicitAny": false,
+    "jsx": "react-jsx"
+  }
+}

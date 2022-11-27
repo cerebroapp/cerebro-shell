@@ -1,41 +1,48 @@
 {
-  "name": "cerebro-shell",
-  "version": "0.1.7",
+  "name": "@cerebroapp/cerebro-shell",
+  "version": "1.0.0",
   "description": "Cerebro plugin to execute any shell command from Cerebro search line",
   "license": "MIT",
-  "repository": "KELiON/cerebro-shell",
-  "author": {
-    "name": "Alexandr Subbotin",
-    "email": "kelionweb@gmail.com",
-    "url": "asubbotin.ru"
-  },
+  "repository": "cerebroapp/cerebro-shell",
+  "author": "Alexandr Subbotin <kelionweb@gmail.com> (asubbotin.ru)",
+  "contributors": [
+    "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)"
+  ],
+  "files": [
+    "dist",
+    "screenshot.gif"
+  ],
   "engines": {
-    "node": ">=4"
+    "node": ">=16"
   },
   "scripts": {
-    "start": "cerebro-scripts start",
-    "build": "cerebro-scripts build",
-    "test": "cerebro-scripts test",
-    "prepublish": "rimraf ./dist && npm run build"
+    "start": "cerebro-build start",
+    "build": "cerebro-build build",
+    "test": "cerebro-build test",
+    "prepublish": "cerebro-build clear && cerebro-build build"
   },
   "main": "dist/index.js",
   "keywords": [
+    "cerebro-plugin",
     "shell",
     "bash",
     "zsh",
     "cerebro",
-    "exec",
-    "cerebro-plugin"
+    "exec"
   ],
   "devDependencies": {
-    "cerebro-scripts": "^0.0.25",
-    "rimraf": "^2.6.2"
+    "@types/memoizee": "0.4.8",
+    "@types/node": "18.11.9",
+    "@types/react": "16.14.34",
+    "cerebro-build": "1.2.0"
   },
   "dependencies": {
-    "cerebro-tools": "^0.1.0",
-    "cerebro-ui": "^0.0.16",
-    "lodash.uniq": "^4.5.0",
-    "shell-env": "^0.3.0",
-    "shell-history": "^1.0.0"
+    "@cerebroapp/cerebro-ui": "2.0.0-alpha.3",
+    "shell-env": "4.0.1",
+    "shell-history": "2.0.0",
+    "memoizee": "0.4.15"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
